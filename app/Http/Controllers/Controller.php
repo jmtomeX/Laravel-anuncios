@@ -6,6 +6,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Http\Request;
 
 class Controller extends BaseController
 {
@@ -44,5 +45,14 @@ class Controller extends BaseController
             ->with('numeroUsuario', $numeroUsuario)
             ->with('numeroMaquina', $numeroMaquina)
             ->with('resultado', $result);
+    }
+
+    public function adivinaNumero(Request $request)
+    {
+        //dd($request);
+        //Aprovechamos la función anterior:
+        $num = $request->apuesta;
+
+        return $this->generaNumero($num);
     }
 }

@@ -26,3 +26,9 @@ Route::get('saludar/{nombre}/{edad?}', 'Controller@saludarPersona')->name('salud
 // acertar un número
 Route::get('acertarNumero/{numeroUsuario}', 'Controller@generaNumero');
 // prueba git
+
+Route::get('indicarNumero', function () {
+    return view('ejemplo_form');
+})->name('indicarnum');
+
+Route::post('acertarNumero', 'Controller@adivinaNumero');
