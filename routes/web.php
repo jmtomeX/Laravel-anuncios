@@ -25,3 +25,4 @@ Route::get('saludar/{nombre}/{edad?}', 'Controller@saludarPersona')->name('salud
 
 // acertar un número
 Route::get('acertarNumero/{numeroUsuario}', 'Controller@generaNumero');
+// prueba git
