@@ -83,7 +83,7 @@
                 <div class="title m-b-md">
                 Ejemplo de formulario:
                 <form method="POST" action="{{url('acertarNumero')}}">
-                    <!-- Genera el _token con el input oculto de seguridad que comprueba -->
+                    <!-- Genera el _token con el input oculto de seguridad que comprueba. -->
                     @csrf
                     <label for="apuesta">Introduce un número</label>
                     <input type="number" name="apuesta"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
